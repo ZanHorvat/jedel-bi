@@ -36,3 +36,44 @@
     font-size: 3rem;
     vertical-align: middle;
 }
+
+.dm-displayed-name {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    bottom: 1rem;
+    font-weight: bold;
+}
+
+.dm-front-settings {
+    position: absolute;
+    top: 1rem;
+    color: rgb(216, 216, 216);
+    right: 1rem;
+}
+
+.dm-cards div {
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    margin: 3rem;
+    height: 240px;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    overflow: hidden;
+}
+
+.dm-cards div img {
+    width: 100%;
+}
+
+body {
+    background-image: url('../img/main-background.jpg');
+}
+
+iframe {
+    scrolling: no;
+    width: 100%;
+    height: 500px;
+}
