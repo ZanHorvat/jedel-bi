@@ -34,4 +34,5 @@
 
 .dm-navbar li i.material-icons {
     font-size: 3rem;
+    vertical-align: middle;
 }
