@@ -2,7 +2,7 @@
     position: fixed;
     background-color: rgba(216, 216, 216, 0.029); 
     height: 100%; 
-    width: 20px; 
+    width: 10%; 
     top: 0
 }
 
@@ -26,4 +26,12 @@
     border-color: #007299;
     color: #007299;
     box-shadow: none;
+}
+
+.main-pad {
+    background-image: 
+}
+
+.dm-navbar li{
+    font-size: 2rem;
 }
