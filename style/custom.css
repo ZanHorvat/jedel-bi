@@ -28,10 +28,10 @@
     box-shadow: none;
 }
 
-.main-pad {
-    background-image: 
+.dm-navbar li {
+    font-size: 2rem;
 }
 
-.dm-navbar li{
-    font-size: 2rem;
+.dm-navbar li i.material-icons {
+    font-size: 3rem;
 }
