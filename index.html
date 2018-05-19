@@ -15,6 +15,7 @@
 
   <!-- Custom styles for this template -->
   <link href="style/custom.css" rel="stylesheet">
+  <link href="style/cards.css" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -30,39 +31,54 @@
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
   <script>
-      $(document).ready(function () {
-        $("#side-menu a").click(function (event) {
-          event.preventDefault();
-          loadPage($(this).attr('href'));
-        });
+    $(document).ready(function () {
+      $("#side-menu a").click(function (event) {
+        event.preventDefault();
+        loadPage($(this).attr('href'));
       });
-      function loadPage(site) {
-        $.get(site, function (data) {
-          $("#main-container").html(data);
-          $("html").click();
-        });
-      }
-    </script>
+    });
+    function loadPage(site) {
+      $.get(site, function (data) {
+        $("#main-container").html(data);
+        $("html").click();
+      });
+    }
+  </script>
+
+  <link href="/material-components-web-catalog/static/css/main.f3c8a5ce.css" rel="stylesheet">
+
+  <link rel="manifest" href="/material-components-web-catalog/manifest.json">
+  <link rel="shortcut icon" href="/material-components-web-catalog/static/media/mdc_web_48dp.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700">
 </head>
 
 <body>
-  <div id="side-menu" class="navmenu navmenu-inverse navmenu-default navmenu-fixed-left offcanvas-sm">
+  <div id="side-menu" style="border: none;" class="navmenu navmenu-inverse navmenu-default navmenu-fixed-left offcanvas-sm">
     <ul class="nav navmenu-nav dm-navbar">
-      <li>
-        <a style="text-align: center">
-          <img id="avatar" src="http://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png" alt="" style="width: 150px;">
-        </a>
+      <li style="background-color: rgba(235, 235, 235, 0.781)">
+        <div style="display: table; padding: 20px;">
+          <div style="display: table-row">
+            <div style="display: table-cell; padding: 1rem">
+              <a>
+                <img id="avatar" src="http://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png" alt="" style="width: 8rem">
+              </a>
+            </div>
+            <div style="display: table-cell;">
+              <span class="dm-displayed-name">John Doe</span>
+              <a>
+                <i style="color: #000000; font-size: 3rem;" class="glyphicon glyphicon-cog dm-front-settings"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </li>
-      <li>
-        <a href="./test.html">
-          <i class="material-icons">sentiment_neutral</i>
-          <span>Kuham sam</span>
-        </a>
-      </li>
-      <li>
+      <li style="margin-top: 20px;">
         <a href="#">
           <i class="material-icons">group</i>
-          <span>Jemo skupaj</span>
+          <span>Jejmo skupaj</span>
         </a>
       </li>
       <li>
@@ -86,20 +102,83 @@
     </ul>
   </div>
 
-  <div data-toggle="offcanvas" data-target=".navmenu" class="dm-hidden-navmenu-opener">
+  <div data-toggle="offcanvas" data-target=".navmenu" class="dm-hidden-navmenu-opener"></div>
+  
+  <div id="main-container">
+    <div class="wrapper">
 
-  </div>
-
-  <div id="main-container" class="container main-pad">
-    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem modi nesciunt natus, reprehenderit provident beatae
-      dolorum sunt error. Harum perferendis dolore tempore. Rem quos tempora necessitatibus ipsam similique inventore placeat
-      neque! Sint neque quaerat ullam quisquam dolorem, fugiat asperiores quas perspiciatis sequi dolorum necessitatibus
-      quos illum tempora doloremque assumenda et.</p>
-    <div style="text-align: center;">
-      <button type="button" class="btn btn-primary btn-lg outline">Choose</button>
+        <div class="card radius shadowDepth1">
+          <div class="card__image border-tlr-radius">
+            <img src="img\sample-restaurant-1.jpeg">
+          </div>
+          <div class="card__content card__padding">
+            <article class="card__article">
+              <h3>
+                <a href="#">The Foo</a>
+              </h3>
+              <p>
+                <time>4 km</time>
+              </p>
+              <p style="width: 100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    <div class="wrapper">
+      <div class="card radius shadowDepth1">
+        <div class="card__image border-tlr-radius">
+          <img src="img\sample-restaurant-2.jpeg">
+        </div>
+        <div class="card__content card__padding">
+          <article class="card__article">
+            <h3>
+              <a href="#">The Foo</a>
+            </h3>
+            <p>
+              <time>2 km</time>
+            </p>
+            <p style="width: 100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="card radius shadowDepth1">
+        <div class="card__image border-tlr-radius">
+          <img src="img\sample-restaurant-3.jpeg">
+        </div>
+        <div class="card__content card__padding">
+          <article class="card__article">
+            <h3>
+              <a href="#">The Foo</a>
+            </h3>
+            <p>
+              <time>5 km</time>
+            </p>
+            <p style="width: 100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="card radius shadowDepth1">
+        <div class="card__image border-tlr-radius">
+          <img src="img\sample-restaurant-4.jpeg">
+        </div>
+        <div class="card__content card__padding">
+          <article class="card__article">
+            <h3>
+              <a href="#">The Foo</a>
+            </h3>
+            <p>
+              <time>6 km</time>
+            </p>
+            <p style="width: 100%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+          </article>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- /.container -->
 </body>
 
 </html>
