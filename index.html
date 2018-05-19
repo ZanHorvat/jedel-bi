@@ -29,10 +29,24 @@
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+  <script>
+      $(document).ready(function () {
+        $("#side-menu a").click(function (event) {
+          event.preventDefault();
+          loadPage($(this).attr('href'));
+        });
+      });
+      function loadPage(site) {
+        $.get(site, function (data) {
+          $("#main-container").html(data);
+          $("html").click();
+        });
+      }
+    </script>
 </head>
 
 <body>
-  <div class="navmenu navmenu-inverse navmenu-default navmenu-fixed-left offcanvas-sm">
+  <div id="side-menu" class="navmenu navmenu-inverse navmenu-default navmenu-fixed-left offcanvas-sm">
     <ul class="nav navmenu-nav dm-navbar">
       <li>
         <a style="text-align: center">
@@ -40,7 +54,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="./test.html">
           <i class="material-icons">sentiment_neutral</i>
           <span>Kuham sam</span>
         </a>
@@ -76,7 +90,7 @@
 
   </div>
 
-  <div class="container main-pad">
+  <div id="main-container" class="container main-pad">
     <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem modi nesciunt natus, reprehenderit provident beatae
       dolorum sunt error. Harum perferendis dolore tempore. Rem quos tempora necessitatibus ipsam similique inventore placeat
       neque! Sint neque quaerat ullam quisquam dolorem, fugiat asperiores quas perspiciatis sequi dolorum necessitatibus
