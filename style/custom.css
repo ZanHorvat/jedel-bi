@@ -73,7 +73,14 @@ body {
 }
 
 iframe {
-    scrolling: no;
     width: 100%;
     height: 500px;
+}
+
+.card__article ul {
+    padding-left: 1.5rem;
+}
+
+.card__article h3 {
+    margin-top: 0;
 }
