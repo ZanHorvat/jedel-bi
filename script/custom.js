@@ -66,3 +66,13 @@ var app = new Vue({
         ],
     }
 })
+
+var app2 = new Vue({
+    el: '#alergen-app',
+    data: {
+        alergens: [
+            {name: 'gluten'}, 
+            {name:'laktoza'}
+        ]
+    }
+})

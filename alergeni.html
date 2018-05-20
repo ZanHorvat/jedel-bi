@@ -1,11 +1,20 @@
-<div style="min-height: 100vh; width: 100%; background-color: #ffffff; position: fixed; top: 0px; left: 0px">
-    <div style="margin-top: 70px; margin-left: 20px; margin-right: 20px;">
-        <div class="setting">
-            <p class="setting">Alergen1</p>
-            <p class="setting-desc">alergen description</p>
+<script>
+    $("#top-icon-arrow").off("click");
+    $("#top-icon-arrow").click(function (event) {
+        loadPage('./nastavitve.html', 'Nastavitve', false);
+    });
+</script>
+
+<div id="alergen-app">
+    <div style="min-height: 100vh; width: 100%; background-color: #ffffff; position: fixed; top: 0px; left: 0px">
+        <div style="margin-top: 70px; margin-left: 20px; margin-right: 20px;">
+            <div v-for="a in alergens" style="border-bottom: solid 1px rgb(209, 209, 209)" class="setting">
+                <p class="setting">{{a.name}}</p>
+            </div>
         </div>
     </div>
 </div>
+<script src="script/custom.js"></script>
 
 <div style="position: fixed; bottom: 1rem; right: 1rem">
     <img src="./img/plus.svg" width="70" height="70">
