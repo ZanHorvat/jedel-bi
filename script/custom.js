@@ -16,47 +16,47 @@ var app = new Vue({
             obrok: `pečen krompir, piščanji file`
         }, {
             location: 'FKKT',
-            datum: '1.2.2016',
+            datum: '18.5.2018',
             obrok: `jajčni rezanci v omaki s tartufato,
             zelenjavna kremna juha,
             sestavljena solata`
         }, {
             location: 'FKKT',
-            datum: '1.2.2016',
+            datum: '17.5.2018',
             obrok: `paradižnikova enolončnica z mesnimi cmočki in zelenjavo,
             sestavljena solata,
             sadje, dnevna sladica
             `
         }, {
             location: 'FKKT',
-            datum: '1.2.2016',
+            datum: '16.5.2018',
             obrok: `solatni krožnik s tunininem filejem,
             dnevna juha,
             sestavljena solata            
             `
         }, {
             location: 'FKKT',
-            datum: '1.2.2016',
+            datum: '15.5.2018',
             obrok: `puranji zrezek v omaki s sirom, testenine ali bulgur,
             zelenjavna mineštra,
             sestavljena solata
             `
         }, {
             location: 'FKKT',
-            datum: '1.2.2016',
+            datum: '14.5.2018',
             obrok: `svinjski kotlet na žaru, krompirjevi krhlji in ajvar,
             zelenjavna kremna juha,
             sestavljena solata
             `
         }, {
             location: 'FKKT',
-            datum: '1.2.2016',
+            datum: '11.5.2018',
             obrok: `pečeno piščančje bedro, stročji fižol z gobicami in krompirjevi krhlji,
             zelenjavna kremna juha,
             sestavljena solata`
         }, {
             location: 'FKKT',
-            datum: '1.2.2016',
+            datum: '10.5.2018',
             obrok: `pašta fižol,
             sestavljena solata,
             sadje, dnevna sladica            
