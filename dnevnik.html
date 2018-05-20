@@ -4,8 +4,8 @@
           <div class="card__content card__padding">
             <article class="card__article">
               <p>
-                <location>{{m.location}}</location>
-                <time style="position: absolute; right: 1rem">{{m.datum}}</time>
+                <location><b>{{m.location}}</b></location>
+                <time style="position: absolute; right: 1rem; color: rgb(129, 129, 129)"><i>{{m.datum}}</i></time>
               </p>
               <p style="width: 100%">{{m.obrok}}</p>
             </article>
@@ -15,7 +15,5 @@
 </div>
 <script src="script/custom.js"></script>
 <div style="position: fixed; bottom: 1rem; right: 1rem">
-  <i class="material-icons" style="font-size: 8rem">
-    add_circle
-  </i>
+    <img src="./img/plus.svg" width="70" height="70">
 </div>
