@@ -86,3 +86,11 @@ div.setting {
 i.hidden-icon {
     display: none !important;
 }
+
+.card__article ul {
+    padding-left: 1.5rem;
+}
+
+.card__article h3 {
+    margin-top: 0;
+}
