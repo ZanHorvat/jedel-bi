@@ -72,8 +72,17 @@ body {
     background-image: url('../img/main-background.jpg');
 }
 
-iframe {
-    scrolling: no;
-    width: 100%;
-    height: 500px;
+p.setting {
+    font-size: 1.8rem;
+    margin-bottom: 0px;
+}
+p.setting-desc {
+    font-size: 1.2rem;
+}
+div.setting {
+    margin-bottom: 20px;
+}
+
+i.hidden-icon {
+    display: none !important;
 }
