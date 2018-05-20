@@ -73,7 +73,9 @@ var app2 = new Vue({
         alergens: [
             {name: 'gluten'}, 
             {name:'laktoza'},
-            {name: 'arašidi'}
+            {name: 'arašidi'},
+            {name: 'jajca'},
+            {name: 'oreščki'}
         ]
     }
 })
