@@ -40,16 +40,23 @@
       $("#side-menu a").click(function (event) {
         event.preventDefault();
         $("#side-menu li.active").removeClass("active");
-        $("#menu-title").text($("span", this).text());
         $(this).parent().addClass("active");
-        loadPage($(this).attr('href'));
+        loadPage($(this).attr('href'), $("span", this).text(), false);
       });
     });
-    function loadPage(site) {
+    function loadPage(site, label, arrow) {
       $.get(site, function (data) {
         $("#main-container").html(data);
         $("html").click();
       });
+      $("#menu-title").text(label);
+      if (arrow == true) {
+        $("#top-icon-menu").addClass("hidden-icon");
+        $("#top-icon-arrow").removeClass("hidden-icon");
+      } else {
+        $("#top-icon-arrow").addClass("hidden-icon");
+        $("#top-icon-menu").removeClass("hidden-icon");
+      }
     }
   </script>
 
@@ -77,6 +84,7 @@
             <div style="display: table-cell;">
               <span class="dm-displayed-name">John Doe</span>
               <a href="./settings.html">
+                <span style="display: none">Nastavitve</span>
                 <i style="color: #000000; font-size: 3rem;" class="glyphicon glyphicon-cog dm-front-settings"></i>
               </a>
             </div>
@@ -120,7 +128,8 @@
 
   <div style="height: 50px; width:100vw; background-color: #fafafa; position: fixed; top:0px; left:0px; z-index: 100;">
     <p>
-    <i data-toggle="offcanvas" data-target=".navmenu" class="material-icons" style="display: table-cell; vertical-align: middle; font-size: 25px; padding:10px">menu</i>
+    <i id="top-icon-menu" data-toggle="offcanvas" data-target=".navmenu" class="material-icons" style="display: table-cell; vertical-align: middle; font-size: 25px; padding:10px">menu</i>
+    <i id="top-icon-arrow" onclick="loadPage('./settings.html', 'Nastavitve', false)" class="material-icons hidden-icon" style="display: table-cell; vertical-align: middle; font-size: 25px; padding:10px">arrow_back</i>
     <span id="menu-title" style="display: table-cell; vertical-align: middle; padding-left: 20px; font-size: 20px;">Predlogi</span>
     </p>
   </div>
