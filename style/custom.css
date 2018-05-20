@@ -94,3 +94,7 @@ i.hidden-icon {
 .card__article h3 {
     margin-top: 0;
 }
+
+.card__image.full-img {
+    max-height: 100%;
+}
